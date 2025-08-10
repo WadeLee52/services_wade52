@@ -10,7 +10,7 @@ services:
     environment:
       MYSQL_DATABASE: mydb           # 啟動時自動建立的資料庫
       MYSQL_USER: user              # 建立一個普通用戶
-      MYSQL_PASSWORD: ppWgnb_mfGe2m_          # 該用戶的密碼
+      MYSQL_PASSWORD: test          # 該用戶的密碼
       MYSQL_ROOT_PASSWORD: test     # root 用戶密碼
     volumes:
       - mysql:/var/lib/mysql        # 將資料庫資料持久化到 volume
@@ -33,7 +33,7 @@ services:
       - 8080:80                    # 對外開放 phpMyAdmin 介面為 8080
     environment:
       MYSQL_USER: user             # 登入用戶
-      MYSQL_PASSWORD: ppWgnb_mfGe2m_        # 密碼
+      MYSQL_PASSWORD: test        # 密碼
       MYSQL_ROOT_PASSWORD: test    # root 密碼（其實 PMA_HOST 就足夠）
       PMA_HOST: mysql              # 指定 phpMyAdmin 要連的 MySQL 主機（服務名）
     depends_on:
